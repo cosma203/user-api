@@ -2,9 +2,8 @@ import { Router, Request, Response } from 'express';
 import { body } from 'express-validator';
 
 import { User } from '../models/User';
-import { validateRequest } from '../middlewares/validate-request';
-import { validateObjectId } from '../middlewares/validate-object-id';
-import { BadRequestError } from '../errors/bad-request-error';
+import { validateRequest, validateObjectId } from '../middlewares';
+import { BadRequestError } from '../errors';
 
 const router = Router();
 
