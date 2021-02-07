@@ -1,5 +1,7 @@
 # User API
 
+Simple user api with NodeJS, MongoDB and Expreses
+
 ## Available Scripts
 
 ### `npm start`
