@@ -6,8 +6,8 @@ Simple user api with NodeJS, MongoDB and Express
 
 ### `npm start`
 
-Starts the server in development mode </br>
-Server is running on [localhost:5000](https://localhost:5000)
+Starts the server in development mode. </br>
+Server is running on [localhost:5000](https://localhost:5000).
 
 ### `npm test`
 
