@@ -7,7 +7,7 @@ Simple user api with NodeJS, MongoDB and Express
 ### `npm start`
 
 Starts the server in development mode. </br>
-Server is running on [localhost:5000](https://localhost:5000){:target="_blank"}.
+Server is running on [localhost:5000](https://localhost:5000).
 
 ### `npm test`
 
@@ -19,4 +19,4 @@ Launches the test runner once.
 
 ## Documentation
 
-### [postman-docs](https://documenter.getpostman.com/view/11281111/TW74jkQw){:target="_blank"}
+### [postman-docs](https://documenter.getpostman.com/view/11281111/TW74jkQw)
