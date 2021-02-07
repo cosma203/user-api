@@ -1,6 +1,6 @@
 # User API
 
-Simple user api with NodeJS, MongoDB and Expreses
+Simple user api with NodeJS, MongoDB and Express
 
 ## Available Scripts
 
