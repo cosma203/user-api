@@ -1,7 +1,7 @@
 import express from 'express';
 import { json } from 'body-parser';
 
-import { setupRoutes } from './config/routes';
+import { setupRoutes } from './startup/routes';
 
 const app = express();
 app.use(json());

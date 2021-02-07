@@ -1,6 +1,6 @@
 import { config } from 'dotenv';
 
-import { setupDb } from './config/db';
+import { setupDb } from './startup/db';
 import { app } from './app';
 
 config();
