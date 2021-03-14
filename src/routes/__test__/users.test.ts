@@ -7,7 +7,10 @@ import { User } from '../../models/User';
 describe('USERS', () => {
   const baseUrl = '/api/v1/users';
 
-  let email: string, givenName: string, familyName: string, userId: Types.ObjectId | string;
+  let email: string,
+    givenName: string,
+    familyName: string,
+    userId: Types.ObjectId | string;
 
   beforeEach(() => {
     email = 'test@test.com';
@@ -17,7 +20,10 @@ describe('USERS', () => {
 
   describe(`POST ${baseUrl}`, () => {
     it('should return with the status code of 400 if email is not provided', async () => {
-      const response = await request(app).post(baseUrl).send({ givenName, familyName }).expect(400);
+      const response = await request(app)
+        .post(baseUrl)
+        .send({ givenName, familyName })
+        .expect(400);
 
       expect(response.body.errors).toBeTruthy();
       expect(response.body.errors[0].field).toEqual('email');
@@ -36,7 +42,10 @@ describe('USERS', () => {
     });
 
     it('should return with the status code of 400 if givenName is not provided', async () => {
-      const response = await request(app).post(baseUrl).send({ email, familyName }).expect(400);
+      const response = await request(app)
+        .post(baseUrl)
+        .send({ email, familyName })
+        .expect(400);
 
       expect(response.body.errors).toBeTruthy();
       expect(response.body.errors[0].field).toEqual('givenName');
@@ -67,7 +76,10 @@ describe('USERS', () => {
     });
 
     it('should return with the status code of 400 if familyName is not provided', async () => {
-      const response = await request(app).post(baseUrl).send({ email, givenName }).expect(400);
+      const response = await request(app)
+        .post(baseUrl)
+        .send({ email, givenName })
+        .expect(400);
 
       expect(response.body.errors).toBeTruthy();
       expect(response.body.errors[0].field).toEqual('familyName');
@@ -107,7 +119,10 @@ describe('USERS', () => {
 
       expect(user).toBeTruthy();
 
-      await request(app).post(baseUrl).send({ email, givenName, familyName }).expect(400);
+      await request(app)
+        .post(baseUrl)
+        .send({ email, givenName, familyName })
+        .expect(400);
     });
 
     it('should return with the status code of 201 if user is successfully created', async () => {
@@ -170,7 +185,9 @@ describe('USERS', () => {
     });
 
     it('should return with the status code of 200 if user with the provided id is successfully feteched from the database', async () => {
-      const response = await request(app).get(`${baseUrl}/${userId}`).expect(200);
+      const response = await request(app)
+        .get(`${baseUrl}/${userId}`)
+        .expect(200);
 
       expect(response.body.id).toEqual(userId.toString());
     });
@@ -302,7 +319,9 @@ describe('USERS', () => {
     });
 
     it('should return with the status code of 200 if user with the provided id is successfully deleted from the database', async () => {
-      const response = await request(app).delete(`${baseUrl}/${userId}`).expect(200);
+      const response = await request(app)
+        .delete(`${baseUrl}/${userId}`)
+        .expect(200);
 
       expect(response.body.id).toEqual(userId.toString());
 
